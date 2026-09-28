@@ -1,0 +1,25 @@
+# Agent Manifest — AgentRegistry entry point
+# Static discovery metadata lives at the root; runtime parameters are in
+# config/config.yaml.
+id: "CMN-C2-657"
+name: "CandidateFitAndPerformancePotentialReportAgent"
+namespace: "cmn"
+version: "1.0.0"
+enabled: true
+category: "Cat 2"
+generation_mode: "llm"
+industry: "CMN"
+
+# Opaque compatibility metadata; the graph inherits AgentBaseGraph directly.
+base_type: "AgentBaseGraph"
+
+# AgentRegistry imports the class from this single dotted path.
+class: "src.graph.graph.CandidateFitReportGraph"
+
+# Security
+required_trust_level: "VERIFIED_EXTERNAL"
+
+# Compile-time gates
+requires:
+  secrets: ["LLM_API_KEY"]
+  extras: []

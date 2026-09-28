@@ -1,0 +1,11 @@
+# Runtime parameters loaded separately from the static agent manifest.
+max_retry: 3
+timeout_seconds: 120
+memory_enabled: true
+hitl:
+  enabled: true
+  max_hitl: 8
+population_threshold: 20
+retention_months: 60
+checkpoint_ttl_hours: 120
+summarize_threshold_chars: 20000
